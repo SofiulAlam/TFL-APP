@@ -1,7 +1,10 @@
+import TubeStatus from "./tube-status/TubeStatus";
 function App() {
   return (
     <>
-      <div>This is TFL APP</div>
+      <div>
+        <TubeStatus />
+      </div>
     </>
   );
 }
