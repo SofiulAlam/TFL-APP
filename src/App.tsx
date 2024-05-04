@@ -1,4 +1,4 @@
-import TubeStatus from "./tube-status/TubeStatus";
+import TubeStatus from "./components/tube-status/TubeStatus";
 function App() {
   return (
     <>

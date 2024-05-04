@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./TubeStatus.scss";
-import logo from "../assets/TFL_LOGO.svg";
+import logo from "../../assets/TFL_LOGO.svg";
 
-import statusService from "../services/status-service";
+import statusService from "../../services/status-service";
 import { CanceledError } from "axios";
 
 interface TubeLine {
@@ -16,7 +16,7 @@ const TubeStatus = () => {
   const [tubeLines, setTubeLines] = useState<TubeLine[]>([]);
   const [error, setError] = useState("");
 
-  // Color definitions for tube lines
+  // TUBE COLOR
   const tubeLineColors: { [key: string]: string } = {
     Bakerloo: "#B36305",
     Central: "#DC241F",
@@ -37,7 +37,6 @@ const TubeStatus = () => {
     request
       .then((res) => {
         const data = res.data;
-
         setTubeLines(
           data.map((line: any) => ({
             id: line.id,
@@ -67,8 +66,8 @@ const TubeStatus = () => {
                   className="line-color"
                   style={{
                     backgroundColor: tubeLineColors[line.name],
-                    height: "20px",
-                    width: "20px",
+                    height: "40px",
+                    width: "10px",
                   }}
                 ></div>
                 <div className="line-details">
